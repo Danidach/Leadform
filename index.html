@@ -7,33 +7,36 @@
     <title>Formulario</title>
     <link rel="stylesheet" type="text/css" href="estilos.css" />
   </head>
+
   <body>
     <div class="img">
       <img src="logo 1.png" alt="Descripción de la imagen" />
     </div>
-	</div>
 
-  <title>Color de fondo HTML</title>
-  <style>
-    /* Estilos CSS */
-    body {
-      background-color: #89d3af;
-    
-    .container {
-      background-color: #6dc49c; /* Color de fondo para un elemento específico con la clase "container" */
-      padding: 20px;
-	  width: 500px; /* Ancho del contenedor */
-      margin: 0 auto; /* Margen automático en los lados izquierdo y derecho para centrar horizontalmente */
-      text-align: center; /* Alineación del contenido dentro del contenedor al centro */
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Lead Form</h1>
-    <p>Enter your data in the following fields.</p>
-	<aline
-  </div>
+    <title>Color de fondo HTML</title>
+    <style>
+      /* Estilos CSS */
+      body {
+        background-color: #89d3af;
+      }
+
+      .container {
+        background-color: #6dc49c;
+        /* Color de fondo para un elemento específico con la clase "container" */
+        padding: 20px;
+        width: 500px;
+        /* Ancho del contenedor */
+        margin: 0 auto;
+        /* Margen automático en los lados izquierdo y derecho para centrar horizontalmente */
+        text-align: center;
+        /* Alineación del contenido dentro del contenedor al centro */
+      }
+    </style>
+    <div class="container">
+      <h1>Lead Form</h1>
+      <p>Enter your data in the following fields.</p>
+      <aline
+    </div>
     <form
       action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
       method="POST"
@@ -41,14 +44,6 @@
     >
       <input type="hidden" name="oid" value="00D8b000002wPAg" />
       <input type="hidden" name="retURL" value="http://google.com" />
-
-      <!--  ----------------------------------------------------------------------  -->
-      <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-      <!--  these lines if you wish to test in debug mode.                          -->
-      <!--  <input type="hidden" name="debug" value=1>                              -->
-      <!--  <input type="hidden" name="debugEmail" value="ladadach12@gmail.com">    -->
-      <!--  ----------------------------------------------------------------------  -->
-
       <label for="first_name">First Name</label
       ><input
         id="first_name"
@@ -66,6 +61,38 @@
         size="20"
         type="text"
       /><br />
+
+      <label> Lead Record Type:</label>
+      <select id="recordType" name="recordType">
+        <option value=""></option>
+        <option value="0128b000000ROkl">Business Lead</option>
+        <option value="0128b000000ROkq">Personal Lead</option></select
+      ><br />
+
+      <label>Identity Document Type:</label>
+      <select
+        id="00N8b00000HbfBR"
+        name="00N8b00000HbfBR"
+        title="Identity Document Type"
+      >
+        <option value=""></option>
+        <option value="Passport">Passport</option>
+        <option value="Citizenship card">Citizenship card</option>
+        <option value="Nit">Nit</option>
+        <option value="DNI">DNI</option>
+        <option value="Other">Other</option>
+      </select>
+      <br />
+
+      <label for="Identification Number:">Identification Number</label>
+      <input
+        id="00N8b00000HbfBC"
+        maxlength="255"
+        name="00N8b00000HbfBC"
+        size="20"
+        type="text"
+      />
+      <br />
 
       <label for="email">Email</label
       ><input
@@ -85,28 +112,31 @@
         type="text"
       /><br />
 
-      <label for="city">City</label
+      <label for="country">Country</label
       ><input
-        id="city"
+        id="country"
         maxlength="40"
-        name="city"
+        name="country"
         size="20"
         type="text"
       /><br />
+	  
+	  <label for="city">City</label
+	  ><input 
+		id="city" 
+		maxlength="40" 
+		name="city" size="20"
+		type="text"
+	  /><br>
+
 
       <label>Interest:</label>
       <select id="00N8b00000Hbg4g" name="00N8b00000Hbg4g" title="Interest">
         <option value=""></option>
-        <option value="product">product</option>
-        <option value="service">service</option></select
-      ><br />
-
-      <label> Type:</label
-      ><select id="00N8b00000HbfAs" name="00N8b00000HbfAs" title="Type">
-        <option value=""></option>
-        <option value="Personal Account">Personal Account</option>
-        <option value="Business Account">Business Account</option></select
-      ><br />
+        <option value="Product">Product</option>
+        <option value="Service">Service</option>
+      </select>
+      <br />
 
       <input type="submit" name="submit" />
     </form>
